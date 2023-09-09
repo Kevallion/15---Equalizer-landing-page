@@ -1,0 +1,31 @@
+footer{
+    max-width: 1110px;
+    margin: 0 auto 91px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+        object-fit: contain;
+    }
+    p{
+      max-width: 366px;
+      span{
+        @include fontStyle(16px, 26px , $font2)
+      }
+    }
+
+    ul{
+        display: flex;
+        gap: 20px;
+        li{
+            cursor: pointer;
+            font-size: 25px;
+            color: $black1;
+            transition: 0.2s ease;
+            &:hover{
+                color: $color2;
+                transform: scale(1.2);
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+/********* COLOR ***********/
+
+$color1:#66E2DC;
+$color2:#FA7453;
+$color3:#FFB964;
+$white1:#FCFAF9;
+$black1:#191826;
+
+/********* FONT ***********/
+
+@font-face {
+    font-family:"IBM SansBold";
+    src: url(../fonts/IBMPlexSans-Bold.ttf);
+}
+
+@font-face {
+    font-family:"IBM SansReg";
+    src: url(../fonts/IBMPlexSans-Regular.ttf);
+}
+
+$font1: IBM SansReg, sans-serif;
+$font2: IBM SansBold, sans-serif;
+
+/********* GENERAL PARAMETER *********/
+
+@mixin fontStyle($size, $lineH, $fontFamilly){
+    font-size: $size;
+    line-height: $lineH;
+    font-family: $fontFamilly;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    @include fontStyle(20px, 34px , $font1);
+    background: url(../images/bg-main-desktop.png) no-repeat center center ;
+    background-size: cover;
+    height: 100%;
+
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 312px;
+        height: 468px;
+        background: url(../images/bg-pattern-1.svg);
+        top:-20px;
+        right: 0;
+    }
+}
+
+h1{
+    @include fontStyle(88px, 88px , $font2);
+}
+
+h2{
+    @include fontStyle(40px, 52px , $font2);
+}
+
+footer{
+    @include fontStyle(16px, 26px , $font1);
+}
+
+li{
+    list-style: none;
+}

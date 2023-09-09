@@ -1,0 +1,211 @@
+/********* COLOR ***********/
+/********* FONT ***********/
+@font-face {
+  font-family: "IBM SansBold";
+  src: url(../fonts/IBMPlexSans-Bold.ttf);
+}
+@font-face {
+  font-family: "IBM SansReg";
+  src: url(../fonts/IBMPlexSans-Regular.ttf);
+}
+/********* GENERAL PARAMETER *********/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  line-height: 34px;
+  font-family: IBM SansReg, sans-serif;
+  background: url(../images/bg-main-desktop.png) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+}
+body::after {
+  content: "";
+  position: absolute;
+  width: 312px;
+  height: 468px;
+  background: url(../images/bg-pattern-1.svg);
+  top: -20px;
+  right: 0;
+}
+
+h1 {
+  font-size: 88px;
+  line-height: 88px;
+  font-family: IBM SansBold, sans-serif;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 52px;
+  font-family: IBM SansBold, sans-serif;
+}
+
+footer {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: IBM SansReg, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+header img {
+  margin-top: 62px;
+}
+header .header-content {
+  margin: 127px auto 321px;
+}
+header .header-content h1 {
+  margin-bottom: 40px;
+}
+header .header-content p {
+  max-width: 825px;
+}
+
+main {
+  max-width: 1110px;
+  min-height: 600px;
+  margin: 0 auto 202px;
+  position: relative;
+  background: #191826;
+  border-radius: 12px;
+}
+main::before {
+  content: "";
+  position: absolute;
+  width: 312px;
+  height: 468px;
+  background: url(../images/bg-pattern-2.svg);
+  top: 0;
+  left: 335px;
+}
+main > img {
+  position: absolute;
+  left: 102px;
+  margin-top: -200px;
+  z-index: 2;
+  width: 312px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .premium-card {
+  position: absolute;
+  z-index: 2;
+  right: 102px;
+  top: 102px;
+  width: 446px;
+  height: 625px;
+  color: #FCFAF9;
+  background: #FA7453;
+  border-radius: 12px;
+  padding: 59px;
+}
+main .premium-card p:nth-of-type(1) {
+  margin: 22px 0 39px;
+}
+main .premium-card p:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 39px 0 46px;
+}
+main .premium-card p:nth-of-type(2) span {
+  font-size: 65px;
+  line-height: 52px;
+  font-family: IBM SansBold, sans-serif;
+  margin-right: 16px;
+}
+main .premium-card button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  line-height: 52px;
+  font-family: IBM SansBold, sans-serif;
+  color: #191826;
+  letter-spacing: -0.18px;
+  border: none;
+  width: 100%;
+  min-height: 61px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+main .premium-card button img {
+  margin-right: 8px;
+}
+main .premium-card button:hover {
+  background: #FFB964;
+}
+main .premium-card button:nth-of-type(1) {
+  background: #191826;
+  margin-bottom: 16px;
+  color: #FCFAF9;
+}
+main .premium-card button:nth-of-type(1):hover {
+  background: #66E2DC;
+}
+
+footer {
+  max-width: 1110px;
+  margin: 0 auto 91px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer p {
+  max-width: 366px;
+}
+footer p span {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: IBM SansBold, sans-serif;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+footer ul li {
+  cursor: pointer;
+  font-size: 25px;
+  color: #191826;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+footer ul li:hover {
+  color: #FA7453;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}/*# sourceMappingURL=styles.css.map */

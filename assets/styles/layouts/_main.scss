@@ -1,0 +1,85 @@
+main{
+    max-width: 1110px;
+    min-height: 600px;
+    margin: 0 auto 202px;
+    position: relative;
+    background:$black1;
+    border-radius: 12px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 312px;
+        height: 468px;
+        background: url(../images/bg-pattern-2.svg);
+        top:0;
+        left:335px;
+    }
+
+    > img{
+    position: absolute;
+    left: 102px;
+    margin-top: -200px;
+    z-index:2;
+    width: 312px;
+    object-fit: contain;
+    }
+
+    .premium-card{
+        position: absolute;
+        z-index: 2;
+        right: 102px;
+        top: 102px;
+        width: 446px;
+        height: 625px;
+        color:$white1;
+        background: $color2;
+        border-radius: 12px;
+        padding: 59px;
+
+        p:nth-of-type(1){
+            margin: 22px 0 39px;
+        }
+
+        p:nth-of-type(2){
+            display: flex;
+            align-items: center;
+            margin: 39px 0 46px;
+            span{
+                @include fontStyle(65px, 52px, $font2);
+                margin-right:16px;   
+            }
+        }
+
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include fontStyle(18px, 52px, $font2);
+            color:$black1;
+            letter-spacing: -0.18px;
+            border: none;
+            width: 100%;
+            min-height: 61px;
+            border-radius: 12px;
+            cursor: pointer;
+            img{
+                margin-right: 8px;
+            }
+
+            &:hover{
+                background: $color3;
+            }
+        }
+
+        button:nth-of-type(1){
+            background: $black1;
+            margin-bottom:16px ;
+            color: $white1;
+
+            &:hover{
+                background: $color1;
+            }
+        }
+    }
+}

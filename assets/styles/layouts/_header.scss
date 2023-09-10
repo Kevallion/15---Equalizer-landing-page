@@ -1,13 +1,36 @@
 header{
+    @media screen and (max-width:1160px) {
+        max-width: 520px;
+        margin: 0 2%;
+    }
+
+    @media screen and (max-width:666px) {
+        min-width: 327px;  
+        margin: 0 8%;  
+    }
+
     max-width: 1110px;
     margin: 0 auto;
     img{
-        margin-top: 62px;
+        @media screen and (max-width:666px) {
+            margin-top: 40px;
+        }
     }
 
     .header-content{
+        @media screen and (max-width:1160px) {
+            margin: 95px 0 249px;
+        }
+
+        @media screen and (max-width:666px) {
+            margin:64px auto 166px;
+        }
+
         margin: 127px auto 321px;
         h1{
+            @media screen and (max-width:666px) {
+                margin-bottom:20px;
+            }
             margin-bottom:40px;
         }
         p{

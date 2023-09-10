@@ -1,13 +1,44 @@
 footer{
+    @media screen and (max-width:1160px){
+        max-width: 100%;
+        margin: 0 2% 85px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 32px;
+    }
+
+    @media screen and (max-width:666px) {
+        display: flex;
+        flex-direction: column;
+        margin:0 5% 80px;
+    }
+
     max-width: 1110px;
     margin: 0 auto 91px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     img{
+        @media screen and (max-width:1160px){
+            display:block ;
+            align-self: flex-end;
+        }
+
+        @media screen and (max-width:666px) {
+            align-self: flex-start;
+        }
         object-fit: contain;
     }
     p{
+        @media screen and (max-width:1160px){
+            display: inline-block;
+            grid-row: 2;
+        }
+        @media screen and (max-width:666px) {
+            align-self: flex-start;
+        }
+        
       max-width: 366px;
       span{
         @include fontStyle(16px, 26px , $font2)
@@ -15,9 +46,19 @@ footer{
     }
 
     ul{
+        @media screen and (max-width:1160px){
+            grid-row: 2;
+            justify-self: end;
+        }
+
+        @media screen and (max-width:666px) {
+            align-self: flex-start;
+        }
+
         display: flex;
         gap: 20px;
         li{
+            
             cursor: pointer;
             font-size: 25px;
             color: $black1;

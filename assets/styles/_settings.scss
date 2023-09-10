@@ -36,17 +36,42 @@ $font2: IBM SansBold, sans-serif;
 }
 
 body{
+    @media screen and (max-width:1160px) {
+        @include fontStyle(18px, 28px , $font1);
+        background: url(../images/bg-main-tablet.png) no-repeat;
+        background-size: contain;
+    }
+    @media screen and (max-width:666px) {
+        @include fontStyle(16px, 26px , $font1);
+        background: url(../images/bg-main-mobile.png) no-repeat;
+        background-size: contain;
+    }
+
     @include fontStyle(20px, 34px , $font1);
-    background: url(../images/bg-main-desktop.png) no-repeat center center ;
+
+    background: url(../images/bg-main-desktop.png) no-repeat;
     background-size: cover;
     height: 100%;
-
+    overflow-x: hidden;
     position: relative;
     &::after{
+        @media screen and (max-width:1160px) {
+            width: 266.67px;
+            height: 400px;
+            background-size: contain;
+            top:-30px;
+            right: -37px; 
+        }
+
+        @media screen and (max-width:666px) {
+            display: none;
+        }
+
         content: "";
         position: absolute;
         width: 312px;
         height: 468px;
+        z-index: -1;
         background: url(../images/bg-pattern-1.svg);
         top:-20px;
         right: 0;
@@ -54,10 +79,28 @@ body{
 }
 
 h1{
+    @media screen and (max-width:1160px) {
+        @include fontStyle(64px, 64px , $font2);
+        letter-spacing: -0.73px;
+    }
+
+    @media screen and (max-width:666px) {
+        @include fontStyle(40px, 48px , $font1);
+        letter-spacing: -0.45px;
+    }
+
     @include fontStyle(88px, 88px , $font2);
 }
 
 h2{
+    @media screen and (max-width:1160px) {
+        @include fontStyle(32px, 40px , $font2);
+    }
+
+    @media screen and (max-width:666px) {
+        @include fontStyle(32px, 40px , $font1);
+    }
+
     @include fontStyle(40px, 52px , $font2);
 }
 
